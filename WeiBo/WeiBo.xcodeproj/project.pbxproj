@@ -32,6 +32,7 @@
 		C9B52C74209AA9BD00BF1659 /* NSString+CZHash.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C61209AA9BD00BF1659 /* NSString+CZHash.m */; };
 		C9B52C75209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C66209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m */; };
 		C9B52C76209AA9BD00BF1659 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C67209AA9BD00BF1659 /* NSArray+Log.m */; };
+		C9B52C7F209AAFEE00BF1659 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		C9B52C67209AA9BD00BF1659 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		C9B52C68209AA9BD00BF1659 /* NSString+CZPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZPath.h"; sourceTree = "<group>"; };
 		C9B52C77209AA9F800BF1659 /* Weibo-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weibo-Bridge.h"; sourceTree = "<group>"; };
+		C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 		C9B52BFD209AA1C500BF1659 /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				C9B52C78209AAFEE00BF1659 /* Extensions */,
 				C9B52C4B209AA9BD00BF1659 /* Additions */,
 			);
 			path = "Tools(工具)";
@@ -297,6 +300,14 @@
 				C9B52C68209AA9BD00BF1659 /* NSString+CZPath.h */,
 			);
 			path = Additions;
+			sourceTree = "<group>";
+		};
+		C9B52C78209AAFEE00BF1659 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,6 +458,7 @@
 				C9B52C46209AA84E00BF1659 /* WBMessageViewController.swift in Sources */,
 				C9B52C6C209AA9BD00BF1659 /* UILabel+CZAddition.m in Sources */,
 				C9B52C76209AA9BD00BF1659 /* NSArray+Log.m in Sources */,
+				C9B52C7F209AAFEE00BF1659 /* Bundle+Extension.swift in Sources */,
 				C9B52C71209AA9BD00BF1659 /* UIButton+CZAddition.m in Sources */,
 				C9B52C69209AA9BD00BF1659 /* UIColor+CZAddition.m in Sources */,
 				C9B52C6A209AA9BD00BF1659 /* UIView+CZAddition.m in Sources */,
