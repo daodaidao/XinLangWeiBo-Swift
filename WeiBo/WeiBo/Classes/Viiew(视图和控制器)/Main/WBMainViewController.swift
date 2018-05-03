@@ -28,15 +28,15 @@ class WBMainViewController: UITabBarController {
 extension WBMainViewController{
     //设置所有子控制器
     private func setupChildControllers(){
-
+        
         let array = [
             ["clsName":"WBHomeViewController","title":"首页", "imageName":"home"],
             ["clsName":"WBMessageViewController","title":"消息", "imageName":"message_center"],
-
+            
             ["clsName":"WBDiscoverViewController","title":"发现", "imageName":"discover"],
-
+            
             ["clsName":"WBProfileViewController","title":"我", "imageName":"profile"],
-
+            
             
             ]
         
@@ -64,18 +64,27 @@ extension WBMainViewController{
         
         //2.创建视图控制器
         let vc = cls.init()
-    
+        
         vc.title = title
         
         //3. 设置图像
         vc.tabBarItem.image = UIImage(named: "tabbar_" + imageName)
         vc.tabBarItem.selectedImage = UIImage(named: "tabbar_" + imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
+        //4.设置 tabbar的标题字体
+        
+       //设置颜色没有效果
+//  vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for:.highlighted)
+//        //修改字体 系统默认是12号
+        vc.tabBarItem.setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey:UIFont.systemFont(ofSize: 14)], for: .normal)
+        
+        
+        
         
         
         let nav = WBNavigationController(rootViewController: vc)
         
         return nav
-
+        
     }
     
     
