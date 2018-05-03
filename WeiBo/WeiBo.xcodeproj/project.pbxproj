@@ -11,6 +11,13 @@
 		C9B52BCE209A99FF00BF1659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B52BCD209A99FF00BF1659 /* Assets.xcassets */; };
 		C9B52BDC209A99FF00BF1659 /* WeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BDB209A99FF00BF1659 /* WeiBoTests.swift */; };
 		C9B52BE7209A99FF00BF1659 /* WeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BE6209A99FF00BF1659 /* WeiBoUITests.swift */; };
+		C9B52C3E209AA79800BF1659 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C3D209AA79800BF1659 /* WBMainViewController.swift */; };
+		C9B52C40209AA7EC00BF1659 /* WBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C3F209AA7EC00BF1659 /* WBNavigationController.swift */; };
+		C9B52C42209AA81000BF1659 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C41209AA81000BF1659 /* WBBaseViewController.swift */; };
+		C9B52C44209AA83E00BF1659 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C43209AA83E00BF1659 /* WBHomeViewController.swift */; };
+		C9B52C46209AA84E00BF1659 /* WBMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C45209AA84E00BF1659 /* WBMessageViewController.swift */; };
+		C9B52C48209AA85700BF1659 /* WBDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C47209AA85700BF1659 /* WBDiscoverViewController.swift */; };
+		C9B52C4A209AA85E00BF1659 /* WBProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C49209AA85E00BF1659 /* WBProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +48,13 @@
 		C9B52BE2209A99FF00BF1659 /* WeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B52BE6209A99FF00BF1659 /* WeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiBoUITests.swift; sourceTree = "<group>"; };
 		C9B52BE8209A99FF00BF1659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B52C3D209AA79800BF1659 /* WBMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
+		C9B52C3F209AA7EC00BF1659 /* WBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBNavigationController.swift; sourceTree = "<group>"; };
+		C9B52C41209AA81000BF1659 /* WBBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
+		C9B52C43209AA83E00BF1659 /* WBHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
+		C9B52C45209AA84E00BF1659 /* WBMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBMessageViewController.swift; sourceTree = "<group>"; };
+		C9B52C47209AA85700BF1659 /* WBDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDiscoverViewController.swift; sourceTree = "<group>"; };
+		C9B52C49209AA85E00BF1659 /* WBProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +157,7 @@
 		C9B52BF6209AA1C500BF1659 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C9B52C43209AA83E00BF1659 /* WBHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -150,6 +165,7 @@
 		C9B52BF7209AA1C500BF1659 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				C9B52C47209AA85700BF1659 /* WBDiscoverViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -157,6 +173,7 @@
 		C9B52BF8209AA1C500BF1659 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				C9B52C45209AA84E00BF1659 /* WBMessageViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -164,6 +181,7 @@
 		C9B52BF9209AA1C500BF1659 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C9B52C49209AA85E00BF1659 /* WBProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -171,6 +189,9 @@
 		C9B52BFA209AA1C500BF1659 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C9B52C3D209AA79800BF1659 /* WBMainViewController.swift */,
+				C9B52C3F209AA7EC00BF1659 /* WBNavigationController.swift */,
+				C9B52C41209AA81000BF1659 /* WBBaseViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -326,7 +347,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B52C42209AA81000BF1659 /* WBBaseViewController.swift in Sources */,
+				C9B52C4A209AA85E00BF1659 /* WBProfileViewController.swift in Sources */,
+				C9B52C48209AA85700BF1659 /* WBDiscoverViewController.swift in Sources */,
+				C9B52C3E209AA79800BF1659 /* WBMainViewController.swift in Sources */,
+				C9B52C44209AA83E00BF1659 /* WBHomeViewController.swift in Sources */,
 				C9B52BC7209A99FD00BF1659 /* AppDelegate.swift in Sources */,
+				C9B52C40209AA7EC00BF1659 /* WBNavigationController.swift in Sources */,
+				C9B52C46209AA84E00BF1659 /* WBMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
