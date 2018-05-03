@@ -18,6 +18,14 @@ class WBMainViewController: UITabBarController {
         setupComposeButton()
     }
     
+    
+    //MARK: - 监听方法
+    //撰写微博
+    // FIXME: 没有实现
+    @objc func composeStatus() {
+        print("撰写微博")
+    }
+    
     //MARK: - 私有控件
     // 撰写按钮
     private lazy var composeButton: UIButton = UIButton.yw_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
@@ -51,7 +59,8 @@ extension WBMainViewController{
         
         composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
         
-        
+        //按钮监听方法
+        composeButton.addTarget(self, action: #selector(composeStatus), for: .touchUpInside)
         
         
     }
