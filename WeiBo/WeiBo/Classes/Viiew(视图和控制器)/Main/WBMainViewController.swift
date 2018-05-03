@@ -22,7 +22,11 @@ class WBMainViewController: UITabBarController {
     //MARK: - 监听方法
     //撰写微博
     // FIXME: 没有实现
-    @objc func composeStatus() {
+    // private 方法私有，仅在当前方法对象被访问
+    //@obj 修饰符 能够保证用OC的方式访问。
+    //@obj 允许这个函数在运行时 通过 OC的消息机制被调用。oc的写在.m里通过运行时也可以拿得到
+    // oc一般好习惯都是写.m里，swift里用private修饰下
+    @objc private func composeStatus() {
         print("撰写微博")
     }
     
