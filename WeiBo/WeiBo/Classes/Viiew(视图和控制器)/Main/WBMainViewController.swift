@@ -15,7 +15,17 @@ class WBMainViewController: UITabBarController {
         super.viewDidLoad()
         
         setupChildControllers()
+        setupComposeButton()
     }
+    
+    //MARK: - 私有控件
+    // 撰写按钮
+    private lazy var composeButton: UIButton = UIButton.yw_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
+    
+    
+    
+    
+    
     
 }
 
@@ -26,6 +36,26 @@ class WBMainViewController: UITabBarController {
 
 // MARK: - 设置页面
 extension WBMainViewController{
+    
+    //设置撰写按钮
+    private func setupComposeButton(){
+        tabBar.addSubview(composeButton)
+        
+        //计算按钮的宽度
+        let count = CGFloat(childViewControllers.count)
+        
+        //将向内缩进的宽度减少，能够让按钮的宽度变大，  把容错点挡住 - 1。防止穿帮， 出现空白的UIViewController
+        let w = tabBar.bounds.width / count-1
+        
+        //CGRectInset 正数向内缩进，负数向内扩展
+        
+        composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
+        
+        
+        
+        
+    }
+    
     //设置所有子控制器
     private func setupChildControllers(){
         
@@ -33,6 +63,7 @@ extension WBMainViewController{
             ["clsName":"WBHomeViewController","title":"首页", "imageName":"home"],
             ["clsName":"WBMessageViewController","title":"消息", "imageName":"message_center"],
             
+            ["clsName" : "UIViewController"],
             ["clsName":"WBDiscoverViewController","title":"发现", "imageName":"discover"],
             
             ["clsName":"WBProfileViewController","title":"我", "imageName":"profile"],
@@ -72,15 +103,11 @@ extension WBMainViewController{
         vc.tabBarItem.selectedImage = UIImage(named: "tabbar_" + imageName + "_selected")?.withRenderingMode(.alwaysOriginal)
         //4.设置 tabbar的标题字体
         
-       //设置颜色没有效果
-//  vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for:.highlighted)
-//        //修改字体 系统默认是12号
+        //设置颜色没有效果
+        //  vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for:.highlighted)
+        //        //修改字体 系统默认是12号
         vc.tabBarItem.setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey:UIFont.systemFont(ofSize: 14)], for: .normal)
-        
-        
-        
-        
-        
+
         let nav = WBNavigationController(rootViewController: vc)
         
         return nav
