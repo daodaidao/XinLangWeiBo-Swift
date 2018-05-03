@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C9B52BC7209A99FD00BF1659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */; };
-		C9B52BC9209A99FD00BF1659 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BC8209A99FD00BF1659 /* ViewController.swift */; };
-		C9B52BCC209A99FD00BF1659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B52BCA209A99FD00BF1659 /* Main.storyboard */; };
 		C9B52BCE209A99FF00BF1659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B52BCD209A99FF00BF1659 /* Assets.xcassets */; };
-		C9B52BD1209A99FF00BF1659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B52BCF209A99FF00BF1659 /* LaunchScreen.storyboard */; };
 		C9B52BDC209A99FF00BF1659 /* WeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BDB209A99FF00BF1659 /* WeiBoTests.swift */; };
 		C9B52BE7209A99FF00BF1659 /* WeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BE6209A99FF00BF1659 /* WeiBoUITests.swift */; };
 /* End PBXBuildFile section */
@@ -36,10 +33,7 @@
 /* Begin PBXFileReference section */
 		C9B52BC3209A99FD00BF1659 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9B52BC8209A99FD00BF1659 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C9B52BCB209A99FD00BF1659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9B52BCD209A99FF00BF1659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C9B52BD0209A99FF00BF1659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9B52BD2209A99FF00BF1659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9B52BD7209A99FF00BF1659 /* WeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B52BDB209A99FF00BF1659 /* WeiBoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiBoTests.swift; sourceTree = "<group>"; };
@@ -97,11 +91,9 @@
 		C9B52BC5209A99FD00BF1659 /* WeiBo */ = {
 			isa = PBXGroup;
 			children = (
+				C9B52BF4209AA1C500BF1659 /* Classes */,
 				C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */,
-				C9B52BC8209A99FD00BF1659 /* ViewController.swift */,
-				C9B52BCA209A99FD00BF1659 /* Main.storyboard */,
 				C9B52BCD209A99FF00BF1659 /* Assets.xcassets */,
-				C9B52BCF209A99FF00BF1659 /* LaunchScreen.storyboard */,
 				C9B52BD2209A99FF00BF1659 /* Info.plist */,
 			);
 			path = WeiBo;
@@ -123,6 +115,85 @@
 				C9B52BE8209A99FF00BF1659 /* Info.plist */,
 			);
 			path = WeiBoUITests;
+			sourceTree = "<group>";
+		};
+		C9B52BF4209AA1C500BF1659 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C9B52BF5209AA1C500BF1659 /* Viiew(视图和控制器) */,
+				C9B52BFB209AA1C500BF1659 /* ViewModel(视图模型) */,
+				C9B52BFC209AA1C500BF1659 /* Model(模型) */,
+				C9B52BFD209AA1C500BF1659 /* Tools(工具) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C9B52BF5209AA1C500BF1659 /* Viiew(视图和控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				C9B52BFA209AA1C500BF1659 /* Main */,
+				C9B52BF6209AA1C500BF1659 /* Home */,
+				C9B52BF8209AA1C500BF1659 /* Message */,
+				C9B52BF7209AA1C500BF1659 /* Discover */,
+				C9B52BF9209AA1C500BF1659 /* Profile */,
+			);
+			path = "Viiew(视图和控制器)";
+			sourceTree = "<group>";
+		};
+		C9B52BF6209AA1C500BF1659 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C9B52BF7209AA1C500BF1659 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		C9B52BF8209AA1C500BF1659 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		C9B52BF9209AA1C500BF1659 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C9B52BFA209AA1C500BF1659 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C9B52BFB209AA1C500BF1659 /* ViewModel(视图模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ViewModel(视图模型)";
+			sourceTree = "<group>";
+		};
+		C9B52BFC209AA1C500BF1659 /* Model(模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model(模型)";
+			sourceTree = "<group>";
+		};
+		C9B52BFD209AA1C500BF1659 /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools(工具)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +258,7 @@
 		C9B52BBB209A99FD00BF1659 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WB;
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = SYJ;
@@ -229,9 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9B52BD1209A99FF00BF1659 /* LaunchScreen.storyboard in Resources */,
 				C9B52BCE209A99FF00BF1659 /* Assets.xcassets in Resources */,
-				C9B52BCC209A99FD00BF1659 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9B52BC9209A99FD00BF1659 /* ViewController.swift in Sources */,
 				C9B52BC7209A99FD00BF1659 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,25 +360,6 @@
 			targetProxy = C9B52BE3209A99FF00BF1659 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C9B52BCA209A99FD00BF1659 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9B52BCB209A99FD00BF1659 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C9B52BCF209A99FF00BF1659 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9B52BD0209A99FF00BF1659 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C9B52BE9209A99FF00BF1659 /* Debug */ = {
@@ -430,8 +480,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -447,8 +499,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
