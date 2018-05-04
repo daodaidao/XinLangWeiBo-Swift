@@ -40,6 +40,12 @@ class WBBaseViewController: UIViewController {
     func setupUI(){
         view.backgroundColor = UIColor.yw_random()
        
+        
+        //nav和scrollview 要进行缩进的调整
+        
+        //如果隐藏了导航栏会缩进20个点
+        automaticallyAdjustsScrollViewInsets = false
+        
         //代码顺序如果都要注意就太累了，在下面插入下就可以了
 
         setupNavigationBar()
@@ -55,6 +61,8 @@ class WBBaseViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.delegate = self
         
+        //设置内容缩进
+//        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49 , right: 0)
         
     }
     
@@ -80,7 +88,7 @@ extension WBBaseViewController: UITableViewDelegate,UITableViewDataSource{
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return 1;
     }
     //基类只是准备方法，子类负责具体的实现
     //子类的数据源方法不需要 super
