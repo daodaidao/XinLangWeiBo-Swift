@@ -30,10 +30,11 @@ class WBDemoViewController: WBBaseViewController {
         //设置右侧控制器
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "下一个", style: .plain, target: self, action: #selector(showNext))
         
-        let btn : UIButton = UIButton.yw_textButton("下一个", fontSize: 16, normalColor: UIColor.darkGray, highlightedColor: UIColor.orange)
-        btn.addTarget(self, action: #selector(showNext), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
-        
+//        let btn : UIButton = UIButton.yw_textButton("下一个", fontSize: 16, normalColor: UIColor.darkGray, highlightedColor: UIColor.orange)
+//        btn.addTarget(self, action: #selector(showNext), for: .touchUpInside)
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "下一个", target: self, action: #selector(showNext))
+
     }
     
     
