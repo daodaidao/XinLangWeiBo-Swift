@@ -16,18 +16,16 @@ class WBNavigationController: UINavigationController {
     }
     
     
-    
-    
     //重写push方法 所有push动作都会调用此方法
     //viewController 是被push的控制器，可以设置它的左侧的按钮作为返回按钮
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         //如果不是栈底控制器才需要隐藏，根控制器不需要处理
         if childViewControllers.count > 0 {
-          
+            
             //隐藏底部的 TabBar
             viewController.hidesBottomBarWhenPushed = true
-          
+            
             //判断控制器的类型
             if let vc = viewController as? WBBaseViewController {
                 
@@ -38,10 +36,10 @@ class WBNavigationController: UINavigationController {
                     title = childViewControllers.first?.title ?? "返回"
                     
                 }
-               
+                
                 //取出自定义的 navItem
-                vc.navItem.leftBarButtonItem = UIBarButtonItem(title: title, target: self, action: #selector(popToParent))
-            
+                vc.navItem.leftBarButtonItem = UIBarButtonItem(title: title, target: self, action: #selector(popToParent),  isBack:true)
+                
             }
             
         }
