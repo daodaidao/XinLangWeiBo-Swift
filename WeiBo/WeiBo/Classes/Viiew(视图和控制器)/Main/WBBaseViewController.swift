@@ -23,6 +23,7 @@ class WBBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        loadData()
     }
     
     //重写 title的didSet
@@ -32,6 +33,9 @@ class WBBaseViewController: UIViewController {
         }
     }
     
+    func loadData(){
+        //子类去重写
+    }
     
     func setupUI(){
         view.backgroundColor = UIColor.yw_random()
