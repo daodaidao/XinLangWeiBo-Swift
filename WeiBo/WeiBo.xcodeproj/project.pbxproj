@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C947A4A2209C3A8700D6E160 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */; };
+		C947A4A4209C46B400D6E160 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947A4A3209C46B400D6E160 /* UIBarButtonItem+Extension.swift */; };
 		C9B52BC7209A99FD00BF1659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */; };
 		C9B52BCE209A99FF00BF1659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B52BCD209A99FF00BF1659 /* Assets.xcassets */; };
 		C9B52BDC209A99FF00BF1659 /* WeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BDB209A99FF00BF1659 /* WeiBoTests.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
+		C947A4A3209C46B400D6E160 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C9B52BC3209A99FD00BF1659 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9B52BCD209A99FF00BF1659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 		C9B52C78209AAFEE00BF1659 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C947A4A3209C46B400D6E160 /* UIBarButtonItem+Extension.swift */,
 				C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */,
 			);
 			path = Extensions;
@@ -453,6 +456,7 @@
 			files = (
 				C9B52C42209AA81000BF1659 /* WBBaseViewController.swift in Sources */,
 				C9B52C6F209AA9BD00BF1659 /* NSString+CZPath.m in Sources */,
+				C947A4A4209C46B400D6E160 /* UIBarButtonItem+Extension.swift in Sources */,
 				C9B52C75209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m in Sources */,
 				C9B52C4A209AA85E00BF1659 /* WBProfileViewController.swift in Sources */,
 				C9B52C6B209AA9BD00BF1659 /* UIScreen+CZAddition.m in Sources */,
