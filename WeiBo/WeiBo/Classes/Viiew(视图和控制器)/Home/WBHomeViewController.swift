@@ -42,7 +42,7 @@ class WBHomeViewController: WBBaseViewController {
 //        btn.addTarget(self, action: #selector(showFriends), for: .touchUpInside)
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", target: self, action: #selector(showFriends))
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "好友", target: self, action: #selector(showFriends))
         
     }
     
