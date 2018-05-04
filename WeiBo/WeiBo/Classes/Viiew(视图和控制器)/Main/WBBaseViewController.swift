@@ -7,6 +7,8 @@
 //
 
 import UIKit
+// swift里用,号 类似于多继承  ，oc中不支持多继承，答案使用协议。
+//class WBBaseViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
 class WBBaseViewController: UIViewController {
     
@@ -45,6 +47,11 @@ class WBBaseViewController: UIViewController {
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         view.insertSubview(tableView!, belowSubview: navigationBar)
+        //设置数据源和代理，目的 ： 子类直接实现数据方法
+        tableView?.dataSource = self
+        tableView?.delegate = self
+        
+        
     }
     
     
@@ -63,8 +70,21 @@ class WBBaseViewController: UIViewController {
     }
     
 }
+//在swift中利用 extension可以把 函数按照功能分类管理，便于阅读和维护
+//注意：1.extension不能有属性 2.不能重写父类方法！重写父类方法是子类的职责。扩展是对类的扩展
+extension WBBaseViewController: UITableViewDelegate,UITableViewDataSource{
 
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10;
+    }
+    //基类只是准备方法，子类负责具体的实现
+    //子类的数据源方法不需要 super
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+}
 
 
 
