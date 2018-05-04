@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C947A4A2209C3A8700D6E160 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */; };
 		C9B52BC7209A99FD00BF1659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */; };
 		C9B52BCE209A99FF00BF1659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B52BCD209A99FF00BF1659 /* Assets.xcassets */; };
 		C9B52BDC209A99FF00BF1659 /* WeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BDB209A99FF00BF1659 /* WeiBoTests.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		C9B52BC3209A99FD00BF1659 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9B52BCD209A99FF00BF1659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C947A4A0209C3A6800D6E160 /* 测试 */ = {
+			isa = PBXGroup;
+			children = (
+				C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */,
+			);
+			path = "测试";
+			sourceTree = "<group>";
+		};
 		C9B52BBA209A99FD00BF1659 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +246,7 @@
 		C9B52BFA209AA1C500BF1659 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C947A4A0209C3A6800D6E160 /* 测试 */,
 				C9B52C3D209AA79800BF1659 /* WBMainViewController.swift */,
 				C9B52C3F209AA7EC00BF1659 /* WBNavigationController.swift */,
 				C9B52C41209AA81000BF1659 /* WBBaseViewController.swift */,
@@ -458,6 +469,7 @@
 				C9B52C46209AA84E00BF1659 /* WBMessageViewController.swift in Sources */,
 				C9B52C6C209AA9BD00BF1659 /* UILabel+CZAddition.m in Sources */,
 				C9B52C76209AA9BD00BF1659 /* NSArray+Log.m in Sources */,
+				C947A4A2209C3A8700D6E160 /* WBDemoViewController.swift in Sources */,
 				C9B52C7F209AAFEE00BF1659 /* Bundle+Extension.swift in Sources */,
 				C9B52C71209AA9BD00BF1659 /* UIButton+CZAddition.m in Sources */,
 				C9B52C69209AA9BD00BF1659 /* UIColor+CZAddition.m in Sources */,

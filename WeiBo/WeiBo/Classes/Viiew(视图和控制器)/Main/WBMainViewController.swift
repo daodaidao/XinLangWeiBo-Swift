@@ -34,11 +34,7 @@ class WBMainViewController: UITabBarController {
     // 撰写按钮
     private lazy var composeButton: UIButton = UIButton.yw_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
     
-    
-    
-    
-    
-    
+   
 }
 
 // extension 类似于 OC中的分类，在Swift 中还可以用来切分代码块
