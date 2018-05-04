@@ -13,6 +13,9 @@ class WBNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.isHidden = true
+        
+        
+            
     }
     
     

@@ -18,6 +18,14 @@ class WBMainViewController: UITabBarController {
         setupComposeButton()
     }
     
+    /// portrait  竖屏，肖像。  landscape 横屏 风景画
+    //  使用代码控制设备的方向，好处，可以在需要横屏的时候，单独处理！
+    //  设置支持的方向之后 当前的控制器及子控制器都会遵守这个方向！
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        
+        return .portrait
+    }
+    
     
     //MARK: - 监听方法
     //撰写微博

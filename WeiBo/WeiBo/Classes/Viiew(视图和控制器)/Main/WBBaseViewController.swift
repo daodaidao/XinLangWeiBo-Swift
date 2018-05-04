@@ -39,6 +39,9 @@ class WBBaseViewController: UIViewController {
         //设置navbar渲染颜色 防止跳转的时候有白色
         navigationBar.barTintColor = UIColor.yw_color(withHex: 0xF6F6F6)
         
+        //navBar字体颜色设置
+//        navigationBar.titleTextAttributes = [nsfore]
+        
     }
     
 }
