@@ -10,6 +10,14 @@ import UIKit
 
 class WBNavigationController: UINavigationController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBar.isHidden = true
+    }
+    
+    
+    
+
     //重写push方法 所有push动作都会调用此方法
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
