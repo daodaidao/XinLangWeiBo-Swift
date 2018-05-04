@@ -36,6 +36,14 @@ class WBMainViewController: UITabBarController {
     // oc一般好习惯都是写.m里，swift里用private修饰下
     @objc private func composeStatus() {
         print("撰写微博")
+        
+        let vc = UIViewController()
+        vc.view.backgroundColor = UIColor.yw_random()
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
+        
+        
+        
     }
     
     //MARK: - 私有控件
