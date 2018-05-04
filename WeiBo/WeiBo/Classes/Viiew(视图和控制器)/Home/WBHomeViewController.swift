@@ -23,7 +23,8 @@ class WBHomeViewController: WBBaseViewController {
         
         let vc = WBDemoViewController()
         
-        navigationController?.pushViewController(vc, animated: true)
+        // push 的动作是 nav做的
+    navigationController?.pushViewController(vc, animated: true)
         
     }
     
