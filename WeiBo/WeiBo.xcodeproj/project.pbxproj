@@ -132,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C92F3677209C5CDD00F91421 /* 主控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				C9B52C3D209AA79800BF1659 /* WBMainViewController.swift */,
+				C9B52C3F209AA7EC00BF1659 /* WBNavigationController.swift */,
+			);
+			path = "主控制器";
+			sourceTree = "<group>";
+		};
 		C947A4A0209C3A6800D6E160 /* 测试 */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,8 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				C947A4A0209C3A6800D6E160 /* 测试 */,
-				C9B52C3D209AA79800BF1659 /* WBMainViewController.swift */,
-				C9B52C3F209AA7EC00BF1659 /* WBNavigationController.swift */,
+				C92F3677209C5CDD00F91421 /* 主控制器 */,
 				C9B52C41209AA81000BF1659 /* WBBaseViewController.swift */,
 			);
 			path = Main;
