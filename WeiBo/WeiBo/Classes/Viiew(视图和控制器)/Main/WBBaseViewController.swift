@@ -67,7 +67,7 @@ class WBBaseViewController: UIViewController {
     private func setupVisitorView(){
         
         let visitorView = UIView(frame: view.bounds)
-        visitorView.backgroundColor = UIColor.yw_random()
+//        visitorView.backgroundColor = UIColor.yw_random()
       
         view.insertSubview(visitorView, belowSubview: navigationBar)
         

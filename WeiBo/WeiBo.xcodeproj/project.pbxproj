@@ -35,6 +35,7 @@
 		C9B52C75209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C66209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m */; };
 		C9B52C76209AA9BD00BF1659 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C67209AA9BD00BF1659 /* NSArray+Log.m */; };
 		C9B52C7F209AAFEE00BF1659 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */; };
+		C9E2AAFA209FF5140037D905 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2AAF9209FF5140037D905 /* WBVisitorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		C9B52C68209AA9BD00BF1659 /* NSString+CZPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZPath.h"; sourceTree = "<group>"; };
 		C9B52C77209AA9F800BF1659 /* Weibo-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weibo-Bridge.h"; sourceTree = "<group>"; };
 		C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		C9E2AAF9209FF5140037D905 /* WBVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		C92F3677209C5CDD00F91421 /* 主控制器 */ = {
 			isa = PBXGroup;
 			children = (
+				C9E2AAF8209FF4FD0037D905 /* VisitorView */,
 				C9B52C3D209AA79800BF1659 /* WBMainViewController.swift */,
 				C9B52C3F209AA7EC00BF1659 /* WBNavigationController.swift */,
 			);
@@ -332,6 +335,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C9E2AAF8209FF4FD0037D905 /* VisitorView */ = {
+			isa = PBXGroup;
+			children = (
+				C9E2AAF9209FF5140037D905 /* WBVisitorView.swift */,
+			);
+			path = VisitorView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -484,6 +495,7 @@
 				C947A4A2209C3A8700D6E160 /* WBDemoViewController.swift in Sources */,
 				C9B52C7F209AAFEE00BF1659 /* Bundle+Extension.swift in Sources */,
 				C9B52C71209AA9BD00BF1659 /* UIButton+CZAddition.m in Sources */,
+				C9E2AAFA209FF5140037D905 /* WBVisitorView.swift in Sources */,
 				C9B52C69209AA9BD00BF1659 /* UIColor+CZAddition.m in Sources */,
 				C9B52C6A209AA9BD00BF1659 /* UIView+CZAddition.m in Sources */,
 				C9B52C70209AA9BD00BF1659 /* UIView+JKFrame.m in Sources */,
