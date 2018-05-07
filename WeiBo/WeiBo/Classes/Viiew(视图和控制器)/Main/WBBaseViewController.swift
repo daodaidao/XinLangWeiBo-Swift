@@ -14,6 +14,11 @@ class WBBaseViewController: UIViewController {
     
     //表格视图-如果用户没有登录就创建
     var tableView: UITableView?
+    //刷新控件
+    var refreshControl:UIRefreshControl?
+    
+    
+    
     
     //自定义导航栏 44是没有适配iPhone X的
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.yw_screenWidth(), height: 44))
@@ -36,7 +41,7 @@ class WBBaseViewController: UIViewController {
         }
     }
     
-    func loadData(){
+    @objc func loadData(){
         //子类去重写
     }
     
@@ -55,6 +60,7 @@ class WBBaseViewController: UIViewController {
         
     }
     
+    //设置表格视图
     private func setupTableView () {
         tableView = UITableView(frame: view.bounds, style: .plain)
         
@@ -64,7 +70,17 @@ class WBBaseViewController: UIViewController {
         tableView?.delegate = self
         
         //设置内容缩进(不用修改tableview的y坐标)
+        //配合上面缩进的时候用 automaticallyAdjustsScrollViewInsets
         tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49 , right: 0)
+        
+        //设置刷新控件
+        //1 实例化控件
+        refreshControl = UIRefreshControl()
+        //2.添加表格视图
+        tableView?.addSubview(refreshControl!)
+        //3. 添加监听方法
+        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        
         
     }
     
