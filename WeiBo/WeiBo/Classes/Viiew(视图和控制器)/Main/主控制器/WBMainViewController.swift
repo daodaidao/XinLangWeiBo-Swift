@@ -108,7 +108,7 @@ extension WBMainViewController{
             ["clsName":"WBDiscoverViewController","title":"发现","imageName":"discover","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，最新、最热的微博尽在掌握中，不会再于实事潮流擦肩而过"]],
             ["clsName":"WBProfileViewController","title":"我的","imageName":"profile","visitorInfo" : ["imageName": "visitordiscover_image_profile","message":"登陆后，你的微博、相册、个人资料会显示在这里，展示给别人"]]
         ]
-       
+        
         //测试数据格式是否正确。 转换成plist 更加直观
         //(array as NSArray).write(toFile: "/Users/caihongguang/Desktop/demo.plist", atomically: true)
         
@@ -126,7 +126,8 @@ extension WBMainViewController{
             let clsName = dict["clsName"] as? String,
             let imageName = dict["imageName"] as? String,
             //            //1> 将 clsName转换成 clbs
-            let cls = NSClassFromString(Bundle.main.nameSpace + "." + clsName) as? WBBaseViewController.Type
+            let cls = NSClassFromString(Bundle.main.nameSpace + "." + clsName) as? WBBaseViewController.Type,
+            let visitorDict = dict["visitorInfo"] as?[String: String]
             else
         {
             return UIViewController()
@@ -137,6 +138,9 @@ extension WBMainViewController{
         let vc = cls.init()
         
         vc.title = title
+        
+        //设置控制器访客信息字典
+        vc.visitorInfoDic = visitorDict
         
         //3. 设置图像
         vc.tabBarItem.image = UIImage(named: "tabbar_" + imageName)
