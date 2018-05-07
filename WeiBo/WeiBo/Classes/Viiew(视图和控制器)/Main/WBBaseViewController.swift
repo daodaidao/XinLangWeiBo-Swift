@@ -1,7 +1,7 @@
 //
 //  WBBaseViewController.swift
 //  WeiBo
-//
+// http://www.wufangbo.com/8292/ 导航和状态栏错位适配
 //  Created by caihongguang on 2018/5/3.
 //  Copyright © 2018年 SYJ. All rights reserved.
 //
@@ -15,13 +15,16 @@ class WBBaseViewController: UIViewController {
     //表格视图-如果用户没有登录就创建
     var tableView: UITableView?
     
-    //自定义导航栏
-    lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.yw_screenWidth(), height: UIScreen.yw_screenHeight()))
+    //自定义导航栏 44是没有适配iPhone X的
+    lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.yw_screenWidth(), height: 44))
     //自定义的导航项条目 
     lazy var navItem = UINavigationItem()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         setupUI()
         loadData()
     }
@@ -39,7 +42,7 @@ class WBBaseViewController: UIViewController {
     
     func setupUI(){
         view.backgroundColor = UIColor.yw_random()
-       
+        
         
         //nav和scrollview 要进行缩进的调整
         
@@ -47,10 +50,9 @@ class WBBaseViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         
         //代码顺序如果都要注意就太累了，在下面插入下就可以了
-
         setupNavigationBar()
         setupTableView()
-
+        
     }
     
     private func setupTableView () {
@@ -61,8 +63,8 @@ class WBBaseViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.delegate = self
         
-        //设置内容缩进
-//        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49 , right: 0)
+        //设置内容缩进(不用修改tableview的y坐标)
+        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49 , right: 0)
         
     }
     
@@ -85,7 +87,7 @@ class WBBaseViewController: UIViewController {
 //在swift中利用 extension可以把 函数按照功能分类管理，便于阅读和维护
 //注意：1.extension不能有属性 2.不能重写父类方法！重写父类方法是子类的职责。扩展是对类的扩展
 extension WBBaseViewController: UITableViewDelegate,UITableViewDataSource{
-
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1;
