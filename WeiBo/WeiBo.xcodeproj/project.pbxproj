@@ -35,6 +35,7 @@
 		C9B52C75209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C66209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m */; };
 		C9B52C76209AA9BD00BF1659 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C67209AA9BD00BF1659 /* NSArray+Log.m */; };
 		C9B52C7F209AAFEE00BF1659 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */; };
+		C9DBD22920A032E200FBD440 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = C9DBD22820A032E200FBD440 /* main.json */; };
 		C9E2AAFA209FF5140037D905 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2AAF9209FF5140037D905 /* WBVisitorView.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		C9B52C68209AA9BD00BF1659 /* NSString+CZPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZPath.h"; sourceTree = "<group>"; };
 		C9B52C77209AA9F800BF1659 /* Weibo-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weibo-Bridge.h"; sourceTree = "<group>"; };
 		C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		C9DBD22820A032E200FBD440 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 		C9E2AAF9209FF5140037D905 /* WBVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				C9E2AAF8209FF4FD0037D905 /* VisitorView */,
 				C9B52C3D209AA79800BF1659 /* WBMainViewController.swift */,
 				C9B52C3F209AA7EC00BF1659 /* WBNavigationController.swift */,
+				C9DBD22820A032E200FBD440 /* main.json */,
 			);
 			path = "主控制器";
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DBD22920A032E200FBD440 /* main.json in Resources */,
 				C9B52BCE209A99FF00BF1659 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -61,8 +61,8 @@ class WBVisitorView: UIView {
         anim.toValue = 2 * M_PI
         anim.repeatCount = MAXFLOAT
         anim.duration = 15
-        //完成之后是否删除 如果iconView 被释放 动画会一起销毁
-        anim.isRemovedOnCompletion = false
+        //完成之后是否删除 如果iconView 被释放 动画会一起销毁. 按完 home再回来 还继续动 。如果注释完，就不动了
+       anim.isRemovedOnCompletion = false
         //将动画添加到图层
         iconView.layer.add(anim, forKey: nil)
     }

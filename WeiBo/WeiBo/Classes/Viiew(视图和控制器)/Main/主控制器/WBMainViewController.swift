@@ -112,6 +112,13 @@ extension WBMainViewController{
         //测试数据格式是否正确。 转换成plist 更加直观
         //(array as NSArray).write(toFile: "/Users/caihongguang/Desktop/demo.plist", atomically: true)
         
+       //数组-》 json 序列化
+        let data =   try! JSONSerialization.data(withJSONObject: array, options: [.prettyPrinted])
+        let fileURL = NSURL.fileURL(withPath: "/Users/caihongguang/Desktop/demo.json")
+        (data as NSData).write(to: fileURL, atomically: true)
+    
+        
+        
         var arrayM = [UIViewController]()
         for dict in array {
             arrayM.append(controller(dict: dict as [String : AnyObject]))

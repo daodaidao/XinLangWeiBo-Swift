@@ -21,7 +21,7 @@ class WBBaseViewController: UIViewController {
 
     
     //用户是否登录
-     var userLogin = false
+     var userLogin = true
     //访客视图信息字典
     var visitorInfoDic :[String:String]?
     //表格视图-如果用户没有登录就创建
