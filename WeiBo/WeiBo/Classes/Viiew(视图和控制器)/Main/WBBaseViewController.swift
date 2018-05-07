@@ -16,8 +16,8 @@ class WBBaseViewController: UIViewController {
     var tableView: UITableView?
     //刷新控件
     var refreshControl:UIRefreshControl?
-    
-    
+    //上拉刷新标记
+    var isPullup  = false
     
     
     //自定义导航栏 44是没有适配iPhone X的
@@ -112,6 +112,33 @@ extension WBBaseViewController: UITableViewDelegate,UITableViewDataSource{
     //子类的数据源方法不需要 super
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+    
+    //在显示最后一行的时候做上拉刷新
+    //willDisplay 做无缝上拉加载更多
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        //1.判断indexPath 是否是最后一行(indexPath.section(最大)/row最后一昂)
+        //1> row
+        let row = indexPath.row
+         //2>section
+        let section = tableView.numberOfSections - 1
+       print(section)
+        
+        if row < 0 || section < 0 {
+            return
+        }
+        //3.行数
+        let count = tableView.numberOfRows(inSection: section)
+        
+        //如果是最后一行，同时没有开始上拉刷新
+        if row == (count - 1) && !isPullup{
+            print("上拉刷新")
+            isPullup = true
+            //开始刷新
+            loadData()
+        }
+        
+        
     }
     
 }

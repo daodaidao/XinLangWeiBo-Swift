@@ -27,14 +27,23 @@ class WBHomeViewController: WBBaseViewController {
             print("1 秒后输出")
             
             for i in 0..<15 {
+                if self.isPullup {
+                    //将数据追加到底部
+                    self.statusList.append("上拉\(i)")
+                }
+                
                 //将数据插入到数组顶部
             self.statusList.insert(i.description, at: 0)
             }
             //结束刷新控件
             self.refreshControl?.endRefreshing()
-    
+            //恢复上拉刷新标记
+            self.isPullup = false
             //刷新表格
             self.tableView?.reloadData()
+            
+            
+            
             
         }
         
