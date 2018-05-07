@@ -101,26 +101,37 @@ extension WBMainViewController{
         //默认的 json  。app发送请求，服务器返回新的配置json,例如 美团外卖的 520
         //配置文件保存在沙盒中。1，检查沙盒是否有josn 2. 加载默认的json.
         //3.如果存在就使用json设置界面。 可以做一些活动，如果沙盒有 优先用沙盒的
-        let array: [[String:Any]] = [
-            ["clsName":"WBHomeViewController","title":"首页","imageName":"home","visitorInfo" : ["imageName": "","message":"关注一些人，回这里看看有什么惊喜"]],
-            ["clsName":"WBMessageViewController","title":"消息","imageName":"message_center","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，别人评论你的微博，发给你的消息，都会在这里收到通知"]],
-            ["clsName":"UIViewcontroller"],
-            ["clsName":"WBDiscoverViewController","title":"发现","imageName":"discover","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，最新、最热的微博尽在掌握中，不会再于实事潮流擦肩而过"]],
-            ["clsName":"WBProfileViewController","title":"我的","imageName":"profile","visitorInfo" : ["imageName": "visitordiscover_image_profile","message":"登陆后，你的微博、相册、个人资料会显示在这里，展示给别人"]]
-        ]
         
-        //测试数据格式是否正确。 转换成plist 更加直观
-        //(array as NSArray).write(toFile: "/Users/caihongguang/Desktop/demo.plist", atomically: true)
+        //从bundle加载配置的 json
+        guard let path = Bundle.main.path(forResource: "main.json", ofType: nil),
+            let data = NSData(contentsOfFile: path),
+        let array = try? JSONSerialization.jsonObject(with:data as Data, options: []) as? [[NSString: AnyObject]]
+            else {
+                return
+        }
+      
         
-       //数组-》 json 序列化
-        let data =   try! JSONSerialization.data(withJSONObject: array, options: [.prettyPrinted])
-        let fileURL = NSURL.fileURL(withPath: "/Users/caihongguang/Desktop/demo.json")
-        (data as NSData).write(to: fileURL, atomically: true)
+        
+//        let array: [[String:Any]] = [
+//            ["clsName":"WBHomeViewController","title":"首页","imageName":"home","visitorInfo" : ["imageName": "","message":"关注一些人，回这里看看有什么惊喜"]],
+//            ["clsName":"WBMessageViewController","title":"消息","imageName":"message_center","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，别人评论你的微博，发给你的消息，都会在这里收到通知"]],
+//            ["clsName":"UIViewcontroller"],
+//            ["clsName":"WBDiscoverViewController","title":"发现","imageName":"discover","visitorInfo" : ["imageName": "visitordiscover_image_message","message":"登陆后，最新、最热的微博尽在掌握中，不会再于实事潮流擦肩而过"]],
+//            ["clsName":"WBProfileViewController","title":"我的","imageName":"profile","visitorInfo" : ["imageName": "visitordiscover_image_profile","message":"登陆后，你的微博、相册、个人资料会显示在这里，展示给别人"]]
+//        ]
+//
+//        //测试数据格式是否正确。 转换成plist 更加直观
+//        //(array as NSArray).write(toFile: "/Users/caihongguang/Desktop/demo.plist", atomically: true)
+//
+//       //数组-》 json 序列化
+//        let data =   try! JSONSerialization.data(withJSONObject: array, options: [.prettyPrinted])
+//        let fileURL = NSURL.fileURL(withPath: "/Users/caihongguang/Desktop/demo.json")
+//        (data as NSData).write(to: fileURL, atomically: true)
     
         
         
         var arrayM = [UIViewController]()
-        for dict in array {
+        for dict in array! {
             arrayM.append(controller(dict: dict as [String : AnyObject]))
         }
         viewControllers = arrayM
