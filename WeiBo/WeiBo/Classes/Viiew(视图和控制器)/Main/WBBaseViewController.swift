@@ -11,6 +11,8 @@ import UIKit
 //class WBBaseViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
 class WBBaseViewController: UIViewController {
+    //用户是否登录
+     var userLogin = false
     
     //表格视图-如果用户没有登录就创建
     var tableView: UITableView?
@@ -43,10 +45,12 @@ class WBBaseViewController: UIViewController {
     
     @objc func loadData(){
         //子类去重写
+        //如果子类不实现任何方法，默认关闭刷新控件，主程设计的时候要考虑全面性
+        refreshControl?.endRefreshing()
     }
     
     func setupUI(){
-        view.backgroundColor = UIColor.yw_random()
+        view.backgroundColor = UIColor.white
         
         
         //nav和scrollview 要进行缩进的调整
@@ -56,7 +60,16 @@ class WBBaseViewController: UIViewController {
         
         //代码顺序如果都要注意就太累了，在下面插入下就可以了
         setupNavigationBar()
-        setupTableView()
+        userLogin ? setupTableView() : setupVisitorView()
+ 
+    }
+    
+    private func setupVisitorView(){
+        
+        let visitorView = UIView(frame: view.bounds)
+        visitorView.backgroundColor = UIColor.yw_random()
+      
+        view.insertSubview(visitorView, belowSubview: navigationBar)
         
     }
     
@@ -120,9 +133,9 @@ extension WBBaseViewController: UITableViewDelegate,UITableViewDataSource{
         //1.判断indexPath 是否是最后一行(indexPath.section(最大)/row最后一昂)
         //1> row
         let row = indexPath.row
-         //2>section
+        //2>section
         let section = tableView.numberOfSections - 1
-       print(section)
+        print(section)
         
         if row < 0 || section < 0 {
             return
