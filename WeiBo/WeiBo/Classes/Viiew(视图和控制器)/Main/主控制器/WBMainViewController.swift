@@ -109,7 +109,8 @@ extension WBMainViewController{
             ["clsName":"WBProfileViewController","title":"我的","imageName":"profile","visitorInfo" : ["imageName": "visitordiscover_image_profile","message":"登陆后，你的微博、相册、个人资料会显示在这里，展示给别人"]]
         ]
        
-        
+        //测试数据格式是否正确。 转换成plist 更加直观
+        //(array as NSArray).write(toFile: "/Users/caihongguang/Desktop/demo.plist", atomically: true)
         
         var arrayM = [UIViewController]()
         for dict in array {
