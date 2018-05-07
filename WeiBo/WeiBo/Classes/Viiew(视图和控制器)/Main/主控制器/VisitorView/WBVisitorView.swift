@@ -22,12 +22,12 @@ class WBVisitorView: UIView {
     var visitorInfo:[String: String]?{
         
         didSet{
-            //取字典信息
+            //1.取字典信息
             guard  let imageName = visitorInfo?["imageName"],
                 let message = visitorInfo?["message"] else{
                     return
             }
-            //设置消息
+            //2.设置消息
             tipLabel.text = message
             //首页默认已有 不需要 设置图像
             if imageName == "" {
@@ -43,6 +43,7 @@ class WBVisitorView: UIView {
         }
     }
     
+    //MARK: - 构造函数
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()

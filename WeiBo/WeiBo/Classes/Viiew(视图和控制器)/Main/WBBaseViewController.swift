@@ -87,8 +87,8 @@ class WBBaseViewController: UIViewController {
         visitorView.loginBtn.addTarget(self, action: #selector(login), for: .touchUpInside)
         visitorView.registerBtn.addTarget(self, action: #selector(register), for: .touchUpInside)
         
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
-        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
+//        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
+//        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
         
     }
     
