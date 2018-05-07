@@ -102,10 +102,21 @@ extension WBMainViewController{
         //配置文件保存在沙盒中。1，检查沙盒是否有josn 2. 加载默认的json.
         //3.如果存在就使用json设置界面。 可以做一些活动，如果沙盒有 优先用沙盒的
         
+        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let jsonPath = (docDir as NSString).appendingPathComponent("main.json")
+        
+        var data = NSData(contentsOfFile: jsonPath)
+        
+        if data == nil {
+            let path = Bundle.main.path(forResource: "main.json", ofType: nil)
+            data = NSData(contentsOfFile: path!)
+        }
+        //data一定会有内容，反序列化
+        
+        
         //从bundle加载配置的 json
-        guard let path = Bundle.main.path(forResource: "main.json", ofType: nil),
-            let data = NSData(contentsOfFile: path),
-        let array = try? JSONSerialization.jsonObject(with:data as Data, options: []) as? [[NSString: AnyObject]]
+        guard
+        let array = try? JSONSerialization.jsonObject(with:data! as Data, options: []) as? [[NSString: AnyObject]]
             else {
                 return
         }
