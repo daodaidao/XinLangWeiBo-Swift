@@ -11,11 +11,25 @@ import UIKit
 //主控制器
 class WBMainViewController: UITabBarController {
     
+    /// 用户需要登录通知
+    let YWUserShouldLoginNotification = "YWUserShouldLoginNotification"
+    
+    /// 成功登录通知
+    let YWuserLoginSuccessedNotification = "YWuserLoginSuccessedNotification"
+    
+    @objc private func userLogin(noti:Notification){
+        
+        print("登录通知\(noti)")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupChildControllers()
         setupComposeButton()
+        
+        //注册通知
+        NotificationCenter.default.addObserver(self, selector: #selector(userLogin), name: NSNotification.Name(rawValue: YWUserShouldLoginNotification), object: nil)
     }
     
     /// portrait  竖屏，肖像。  landscape 横屏 风景画
@@ -50,7 +64,7 @@ class WBMainViewController: UITabBarController {
     // 撰写按钮
     private lazy var composeButton: UIButton = UIButton.yw_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
     
-   
+    
 }
 
 // extension 类似于 OC中的分类，在Swift 中还可以用来切分代码块
@@ -132,7 +146,7 @@ extension WBMainViewController{
         //  vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for:.highlighted)
         //        //修改字体 系统默认是12号
         vc.tabBarItem.setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey:UIFont.systemFont(ofSize: 14)], for: .normal)
-
+        
         let nav = WBNavigationController(rootViewController: vc)
         
         return nav

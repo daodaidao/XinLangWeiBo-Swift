@@ -11,9 +11,19 @@ import UIKit
 //class WBBaseViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
 class WBBaseViewController: UIViewController {
+    
+    //MARK: - 全局通知定义
+    /// 用户需要登录通知
+    let YWUserShouldLoginNotification = "YWUserShouldLoginNotification"
+    
+    /// 成功登录通知
+    let YWuserLoginSuccessedNotification = "YWuserLoginSuccessedNotification"
+
+    
     //用户是否登录
      var userLogin = false
-    
+    //访客视图信息字典
+    var visitorInfoDic :[String:String]?
     //表格视图-如果用户没有登录就创建
     var tableView: UITableView?
     //刷新控件
@@ -71,6 +81,15 @@ class WBBaseViewController: UIViewController {
       
         view.insertSubview(visitorView, belowSubview: navigationBar)
         
+        visitorView.visitorInfo = visitorInfoDic
+        
+        //添加访客视图按钮的监听方法
+        visitorView.loginBtn.addTarget(self, action: #selector(login), for: .touchUpInside)
+        visitorView.registerBtn.addTarget(self, action: #selector(register), for: .touchUpInside)
+        
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
+        
     }
     
     //设置表格视图
@@ -110,6 +129,18 @@ class WBBaseViewController: UIViewController {
         
         //navBar字体颜色设置
         //        navigationBar.titleTextAttributes = [nsfore]
+    }
+    
+    @objc fileprivate func login() {
+        
+        print("用户登录")
+        //发送通知
+        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: YWUserShouldLoginNotification), object: nil, userInfo: nil))
+    }
+    
+    @objc fileprivate func register() {
+        
+        print("用户注册")
     }
     
 }
