@@ -60,7 +60,7 @@ class WBBaseViewController: UIViewController {
         refreshControl?.endRefreshing()
     }
     
-    func setupUI(){
+    private func setupUI(){
         view.backgroundColor = UIColor.white
         
         
@@ -87,14 +87,15 @@ class WBBaseViewController: UIViewController {
         //添加访客视图按钮的监听方法
         visitorView.loginBtn.addTarget(self, action: #selector(login), for: .touchUpInside)
         visitorView.registerBtn.addTarget(self, action: #selector(register), for: .touchUpInside)
-         
-//        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
-//        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
+        
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
         
     }
     
     //设置表格视图
-    private func setupTableView () {
+    //子类重写此方法，因为子类不需要关心用户登录之前的逻辑
+    func setupTableView () {
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         view.insertSubview(tableView!, belowSubview: navigationBar)

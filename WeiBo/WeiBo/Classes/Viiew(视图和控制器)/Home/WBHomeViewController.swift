@@ -64,9 +64,11 @@ class WBHomeViewController: WBBaseViewController {
     }
     
     //重写父类的方法
-    override func setupUI() {
-        super.setupUI()
+    
+    
+    override func setupTableView() {
         
+        super.setupTableView()
         //设置导航栏按钮
         //无法高亮
         //        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", style: .plain, target: self, action: #selector(showFriends))
@@ -76,6 +78,7 @@ class WBHomeViewController: WBBaseViewController {
         //        let btn : UIButton = UIButton.yw_textButton("好友", fontSize: 16, normalColor: UIColor.darkGray, highlightedColor: UIColor.orange)
         //        btn.addTarget(self, action: #selector(showFriends), for: .touchUpInside)
         //        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
+        
         
         navItem.leftBarButtonItem = UIBarButtonItem(title: "好友", target: self, action: #selector(showFriends))
         
