@@ -87,7 +87,7 @@ class WBBaseViewController: UIViewController {
         //添加访客视图按钮的监听方法
         visitorView.loginBtn.addTarget(self, action: #selector(login), for: .touchUpInside)
         visitorView.registerBtn.addTarget(self, action: #selector(register), for: .touchUpInside)
-        
+         
 //        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
 //        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
         
@@ -136,7 +136,7 @@ class WBBaseViewController: UIViewController {
         
         print("用户登录")
         //发送通知
-        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: YWUserShouldLoginNotification), object: nil, userInfo: nil))
+//        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: YWUserShouldLoginNotification), object: nil, userInfo: nil))
     }
     
     @objc fileprivate func register() {
