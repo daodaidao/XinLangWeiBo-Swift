@@ -19,11 +19,25 @@ class WBHomeViewController: WBBaseViewController {
     override func loadData() {
         
         print("开始加载数据\(WBNetworkManger.shared)")
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let params = ["access_token":"2.006FpknD_yaRiCdbdbb1f632Lx79wB"]
+        WBNetworkManger.shared.get(urlString, parameters: params, progress:nil, success: { (_, json) in
+            
+            print("请求成功\(json)")
+            
+        }) { (_, error) in
+            
+            print("请求失败\(error)")
+            
+        }
+        
+        
+        
         
         //模拟 延时 加载数据
         //延时1秒执行
         let time: TimeInterval = 1.0
-       
+        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
             //code
             print("1 秒后输出")
@@ -35,7 +49,7 @@ class WBHomeViewController: WBBaseViewController {
                 }
                 
                 //将数据插入到数组顶部
-            self.statusList.insert(i.description, at: 0)
+                self.statusList.insert(i.description, at: 0)
             }
             //结束刷新控件
             self.refreshControl?.endRefreshing()
@@ -43,8 +57,6 @@ class WBHomeViewController: WBBaseViewController {
             self.isPullup = false
             //刷新表格
             self.tableView?.reloadData()
-            
-            
             
             
         }
