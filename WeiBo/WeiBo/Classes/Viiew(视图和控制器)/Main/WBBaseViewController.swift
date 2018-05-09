@@ -127,10 +127,16 @@ class WBBaseViewController: UIViewController {
         //将 item 设置给 bar
         navigationBar.items = [navItem]
         //设置navbar渲染颜色 防止跳转的时候有白色
+        //1.设置导航条整个背景的颜色
         navigationBar.barTintColor = UIColor.yw_color(withHex: 0xF6F6F6)
         
-        //navBar字体颜色设置
-        //        navigationBar.titleTextAttributes = [nsfore]
+        //2.navBar title字体颜色设置
+//        navigationBar.titleTextAttributes = []
+        //设置系统按钮的文字渲染颜色
+        navigationBar.tintColor = UIColor.orange
+        
+        
+        
     }
     
     @objc fileprivate func login() {
