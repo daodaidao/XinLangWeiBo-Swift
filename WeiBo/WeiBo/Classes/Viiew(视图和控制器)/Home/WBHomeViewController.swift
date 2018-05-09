@@ -18,6 +18,8 @@ class WBHomeViewController: WBBaseViewController {
     //加载数据
     override func loadData() {
         
+        print("开始加载数据\(WBNetworkManger.shared)")
+        
         //模拟 延时 加载数据
         //延时1秒执行
         let time: TimeInterval = 1.0
