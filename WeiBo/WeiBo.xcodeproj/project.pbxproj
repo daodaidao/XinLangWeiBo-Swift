@@ -10,6 +10,7 @@
 		489E7B17304AC9E831201686 /* Pods_WeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467503C7CE8AE845C15E4724 /* Pods_WeiBo.framework */; };
 		C9139D4020A3D41A009F0B27 /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9139D3F20A3D41A009F0B27 /* WBNetworkManager+Extension.swift */; };
 		C9139D7C20A42E9A009F0B27 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9139D7B20A42E99009F0B27 /* WBStatus.swift */; };
+		C9139D7E20A431D9009F0B27 /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9139D7D20A431D9009F0B27 /* WBStatusListViewModel.swift */; };
 		C947A4A2209C3A8700D6E160 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */; };
 		C947A4A4209C46B400D6E160 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947A4A3209C46B400D6E160 /* UIBarButtonItem+Extension.swift */; };
 		C9B52BC7209A99FD00BF1659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		4A8B7012DDBA4890EA935949 /* Pods-WeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBo/Pods-WeiBo.release.xcconfig"; sourceTree = "<group>"; };
 		C9139D3F20A3D41A009F0B27 /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		C9139D7B20A42E99009F0B27 /* WBStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
+		C9139D7D20A431D9009F0B27 /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
 		C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		C947A4A3209C46B400D6E160 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C9B52BC3209A99FD00BF1659 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +305,7 @@
 		C9B52BFB209AA1C500BF1659 /* ViewModel(视图模型) */ = {
 			isa = PBXGroup;
 			children = (
+				C9139D7D20A431D9009F0B27 /* WBStatusListViewModel.swift */,
 			);
 			path = "ViewModel(视图模型)";
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B52C42209AA81000BF1659 /* WBBaseViewController.swift in Sources */,
+				C9139D7E20A431D9009F0B27 /* WBStatusListViewModel.swift in Sources */,
 				C9B52C6F209AA9BD00BF1659 /* NSString+CZPath.m in Sources */,
 				C947A4A4209C46B400D6E160 /* UIBarButtonItem+Extension.swift in Sources */,
 				C9B52C75209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m in Sources */,
@@ -748,7 +752,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeiBo/Weibo-Bridge.h";
@@ -766,7 +773,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeiBo/Weibo-Bridge.h";
@@ -782,7 +792,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -798,7 +812,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -813,7 +831,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -828,7 +850,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
