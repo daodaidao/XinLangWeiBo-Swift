@@ -15,7 +15,6 @@ enum WBHTTPMethod {
     case POST
 }
 
-
 //网络管理工具
 class WBNetworkManger: AFHTTPSessionManager {
     
@@ -23,27 +22,35 @@ class WBNetworkManger: AFHTTPSessionManager {
     //在第一次访问时，执行闭包，并在将结果保存在 shared常量中
     static let shared = WBNetworkManger()
     //使用一个函数封装AFN的get和post请求
-    func request(method:WBHTTPMethod = .GET, URLString: String,parameters: [String: AnyObject], completion:@escaping (_ json: AnyObject?, _ isSuccess: Bool)->())
-    {
-        let success = {(task: URLSessionDataTask,json:AnyObject?)->() in
-            completion(json, true)
-        }
+    /// 封装AFN 的的GET /POST请求
+    ///
+    /// - parameter method:     GET /POST
+    /// - parameter URLString:  URLString
+    /// - parameter parameters: 参数字典
+    /// - parameter completion: 回调json、是否成功
+    func request(method: WBHTTPMethod = .GET, URLString: String, parameters: [String:AnyObject]?, completion: @escaping (_ json: AnyObject?,_ isSuccess: Bool) ->Void) {
         
-        let failure = {(task: URLSessionDataTask,error: NSError)->() in
-            //error通常比较吓人，错误原因一顿英文
-            completion(nil,false)
+        //成功回调
+        let success = {(task: URLSessionDataTask, json: Any?) ->() in
+            completion(json as AnyObject?, true)
         }
-        
-        if (method == .GET)
-        {
+        //失败回调
+        let failure = {(task: URLSessionDataTask?, error: Error) ->() in
             
-            
-            //                 get(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
+            //针对 403 处理token 过期
+            if (task?.response as? HTTPURLResponse)?.statusCode == 403 {
+                
+//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: YWUserShouldLoginNotification), object: "bad Token", userInfo: nil)
+            }
+            print("网络请求错误\(error)")
+            completion(nil, false)
         }
-        //                else {
-        //          post(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
-        //        }
         
+        if method == .GET {
+            get(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
+        }else{
+            post(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
+        }
     }
     
     

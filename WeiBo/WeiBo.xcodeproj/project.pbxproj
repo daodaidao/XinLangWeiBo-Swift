@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		489E7B17304AC9E831201686 /* Pods_WeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467503C7CE8AE845C15E4724 /* Pods_WeiBo.framework */; };
+		C9139D4020A3D41A009F0B27 /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9139D3F20A3D41A009F0B27 /* WBNetworkManager+Extension.swift */; };
 		C947A4A2209C3A8700D6E160 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */; };
 		C947A4A4209C46B400D6E160 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947A4A3209C46B400D6E160 /* UIBarButtonItem+Extension.swift */; };
 		C9B52BC7209A99FD00BF1659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52BC6209A99FD00BF1659 /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		441EBA925C4880D14E59FA7A /* Pods-WeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBo/Pods-WeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		467503C7CE8AE845C15E4724 /* Pods_WeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8B7012DDBA4890EA935949 /* Pods-WeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBo/Pods-WeiBo.release.xcconfig"; sourceTree = "<group>"; };
+		C9139D3F20A3D41A009F0B27 /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		C947A4A1209C3A8700D6E160 /* WBDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		C947A4A3209C46B400D6E160 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		C9B52BC3209A99FD00BF1659 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -369,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				C9D12D9620A28E2C0095C99F /* WBNetworkManger.swift */,
+				C9139D3F20A3D41A009F0B27 /* WBNetworkManager+Extension.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				C9B52C44209AA83E00BF1659 /* WBHomeViewController.swift in Sources */,
 				C9B52BC7209A99FD00BF1659 /* AppDelegate.swift in Sources */,
 				C9D12D9720A28E2C0095C99F /* WBNetworkManger.swift in Sources */,
+				C9139D4020A3D41A009F0B27 /* WBNetworkManager+Extension.swift in Sources */,
 				C9B52C40209AA7EC00BF1659 /* WBNavigationController.swift in Sources */,
 				C9B52C74209AA9BD00BF1659 /* NSString+CZHash.m in Sources */,
 				C9B52C6D209AA9BD00BF1659 /* UIImage+Extension.m in Sources */,
@@ -738,7 +742,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeiBo/Weibo-Bridge.h";
@@ -756,7 +763,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeiBo/Weibo-Bridge.h";
@@ -772,7 +782,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -788,7 +802,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -803,7 +821,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -818,7 +840,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeiBoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.WeiBoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
