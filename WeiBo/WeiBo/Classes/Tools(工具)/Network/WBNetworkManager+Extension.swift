@@ -31,19 +31,19 @@ extension WBNetworkManger {
 //        guard let uid = userAccount.uid else {
 //            return
 //        }
-//        
+//
 //        let urlStr = "https://rm.api.weibo.com/2/remind/unread_count.json"
-//        
+//
 //        let params = ["uid": uid]
-//        
+//
 //        tokenRequest(URLString: urlStr, parameters: params as [String : AnyObject]?) { (json, isSuccess) in
-//            
+//
 //            let dic = json as? [String: AnyObject]
 //            let unreadCount = dic?["status"] as? Int
 //            completion(unreadCount ?? 0)
-//            
+//
 //        }
-//        
+//
 //    }
     
 }

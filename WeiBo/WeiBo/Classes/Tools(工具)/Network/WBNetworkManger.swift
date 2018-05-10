@@ -25,6 +25,7 @@ class WBNetworkManger: AFHTTPSessionManager {
     static let shared = WBNetworkManger()
 
     //访问令牌，所有网络请求，都基于此令牌（登录除外）
+    //token如果过期 服务器返回403(表示资源不可用。服务器理解客户的请求，但拒绝处理它，通常由于服务器上文件或目录的权限设置导致的WEB访问错误)
     var accessToken: String? = "2.006FpknD_yaRiCdbdbb1f632Lx79wB"
     
     //专门负责拼接 token的网络请求方法
@@ -86,6 +87,8 @@ class WBNetworkManger: AFHTTPSessionManager {
             //针对 403 处理token 过期
             if (task?.response as? HTTPURLResponse)?.statusCode == 403 {
                 
+                print("token过期了")
+//                FIXME: 发送通知 （本方法不知道谁调用，谁接收到通知，谁处理！）
 //                NotificationCenter.default.post(name: NSNotification.Name(rawValue: YWUserShouldLoginNotification), object: "bad Token", userInfo: nil)
             }
             print("网络请求错误\(error)")
