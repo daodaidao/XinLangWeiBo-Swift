@@ -22,7 +22,7 @@ extension WBNetworkManger {
         tokenRequest(URLString: urlStr, parameters: params as [String : AnyObject]?) { (json, isSuccess) in
             //从json 中获取 statues 字典数组  如果 as？ 失败 result = nil
             let result = json?["statuses"] as? [[String:AnyObject]]
-            
+            print("加载数据成功:\(result)")
             completion(result, isSuccess)
         }
     }
