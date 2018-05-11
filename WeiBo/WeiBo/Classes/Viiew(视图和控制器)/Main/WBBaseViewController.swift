@@ -40,11 +40,11 @@ class WBBaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+
         setupUI()
+        
         loadData()
+        
     }
     
     //重写 title的didSet
