@@ -69,7 +69,7 @@ extension WBHomeViewController {
         //取cell
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for:indexPath)
         
-//        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
+        //        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
         cell.textLabel?.text = "学习swift网络请求去，别用AF了"
         
         return cell
@@ -77,12 +77,6 @@ extension WBHomeViewController {
     
     
 }
-
-
-
-
-
-
 
 
 
