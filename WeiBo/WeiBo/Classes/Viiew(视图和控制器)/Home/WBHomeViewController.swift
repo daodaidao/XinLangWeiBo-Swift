@@ -15,7 +15,6 @@ class WBHomeViewController: WBBaseViewController {
     
     //列表视图模型
     private lazy var listViewModel = WBStatusListViewModel()
-    
     //加载数据
     override func loadData() {
         
@@ -70,7 +69,8 @@ extension WBHomeViewController {
         //取cell
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for:indexPath)
         
-        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
+//        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
+        cell.textLabel?.text = "学习swift网络请求去，别用AF了"
         
         return cell
     }

@@ -10,75 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiBo/Classes/Viiew(&#x89c6;&#x56fe;&#x548c;&#x63a7;&#x5236;&#x5668;)/Home/WBHomeViewController.swift"
-            timestampString = "547696665.3933181"
+            timestampString = "547698289.8391941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "loadData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiBo/Classes/Viiew(&#x89c6;&#x56fe;&#x548c;&#x63a7;&#x5236;&#x5668;)/Home/WBHomeViewController.swift"
-            timestampString = "547696665.3935061"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "loadData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WeiBo.WBHomeViewController.loadData() -&gt; ()"
-                  moduleName = "WeiBo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/caihongguang/Desktop/XinLangWeiBo-Swift/WeiBo/WeiBo/Classes/Viiew(%E8%A7%86%E5%9B%BE%E5%92%8C%E6%8E%A7%E5%88%B6%E5%99%A8)/Home/WBHomeViewController.swift"
-                  timestampString = "547696199.6343729"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "17">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in WeiBo.WBHomeViewController.loadData() -&gt; ()"
-                  moduleName = "WeiBo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/caihongguang/Desktop/XinLangWeiBo-Swift/WeiBo/WeiBo/Classes/Viiew(%E8%A7%86%E5%9B%BE%E5%92%8C%E6%8E%A7%E5%88%B6%E5%99%A8)/Home/WBHomeViewController.swift"
-                  timestampString = "547696199.639119"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "25">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiBo/Classes/Viiew(&#x89c6;&#x56fe;&#x548c;&#x63a7;&#x5236;&#x5668;)/Home/WBHomeViewController.swift"
-            timestampString = "547696665.393579"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "showFriends()"
             landmarkType = "7">
          </BreakpointContent>
@@ -89,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeiBo/Classes/Tools(&#x5de5;&#x5177;)/Network/WBNetworkManager+Extension.swift"
-            timestampString = "547696199.531831"
+            filePath = "WeiBo/Classes/Viiew(&#x89c6;&#x56fe;&#x548c;&#x63a7;&#x5236;&#x5668;)/Home/WBHomeViewController.swift"
+            timestampString = "547698289.8400331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "statusList(since_id:max_id:completion:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
