@@ -15,6 +15,7 @@ class WBHomeViewController: WBBaseViewController {
     
     //列表视图模型
     private lazy var listViewModel = WBStatusListViewModel()
+    
     //加载数据
     override func loadData() {
         
@@ -27,8 +28,7 @@ class WBHomeViewController: WBBaseViewController {
             //刷新表格
             self.tableView?.reloadData()
         }
-        
-        
+ 
     }
     
     
@@ -68,9 +68,16 @@ extension WBHomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //取cell
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for:indexPath)
+//        listViewModel.statusList[indexPath.row].text
         
-        //        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
-        cell.textLabel?.text = "学习swift网络请求去，别用AF了"
+            let statusModel  = listViewModel.statusList[indexPath.row]
+        
+             cell.textLabel?.text = statusModel.status.text
+        
+        
+        
+        
+//        cell.textLabel?.text = "yymodel被改过，标记：jay修改过"s
         
         return cell
     }

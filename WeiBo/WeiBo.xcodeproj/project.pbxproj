@@ -39,6 +39,7 @@
 		C9B52C75209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C66209AA9BD00BF1659 /* NSAttributedString+CZAdditon.m */; };
 		C9B52C76209AA9BD00BF1659 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C67209AA9BD00BF1659 /* NSArray+Log.m */; };
 		C9B52C7F209AAFEE00BF1659 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */; };
+		C9CBC7FA20AA86720057D51A /* YWStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CBC7F920AA86720057D51A /* YWStatusViewModel.swift */; };
 		C9D12D9720A28E2C0095C99F /* WBNetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D12D9620A28E2C0095C99F /* WBNetworkManger.swift */; };
 		C9DBD22920A032E200FBD440 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = C9DBD22820A032E200FBD440 /* main.json */; };
 		C9E2AAFA209FF5140037D905 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2AAF9209FF5140037D905 /* WBVisitorView.swift */; };
@@ -118,6 +119,7 @@
 		C9B52C68209AA9BD00BF1659 /* NSString+CZPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZPath.h"; sourceTree = "<group>"; };
 		C9B52C77209AA9F800BF1659 /* Weibo-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weibo-Bridge.h"; sourceTree = "<group>"; };
 		C9B52C7A209AAFEE00BF1659 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		C9CBC7F920AA86720057D51A /* YWStatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWStatusViewModel.swift; sourceTree = "<group>"; };
 		C9D12D9620A28E2C0095C99F /* WBNetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBNetworkManger.swift; sourceTree = "<group>"; };
 		C9DBD22820A032E200FBD440 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 		C9E2AAF9209FF5140037D905 /* WBVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				C9139D7D20A431D9009F0B27 /* WBStatusListViewModel.swift */,
+				C9CBC7F920AA86720057D51A /* YWStatusViewModel.swift */,
 			);
 			path = "ViewModel(视图模型)";
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CBC7FA20AA86720057D51A /* YWStatusViewModel.swift in Sources */,
 				C9B52C42209AA81000BF1659 /* WBBaseViewController.swift in Sources */,
 				C9139D7E20A431D9009F0B27 /* WBStatusListViewModel.swift in Sources */,
 				C9B52C6F209AA9BD00BF1659 /* NSString+CZPath.m in Sources */,

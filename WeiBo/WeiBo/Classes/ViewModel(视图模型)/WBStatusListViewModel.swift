@@ -20,30 +20,59 @@ import Foundation
 
 class WBStatusListViewModel {
     //微博模型数组懒加载
-    lazy var statusList =  [WBStatus]()
+    lazy var statusList =  [YWStatusViewModel]()
     
     func loadStatus(completion: @escaping (_ isSuccess: Bool)->()){
         
         WBNetworkManger.shared.statusList { (list, isSuccess) in
             
+//            let array =  NSArray.yy_modelArray(with: WBStatus.self, json: list ?? []) as? [WBStatus]
+//
+//            print("array微博数据\(array)")
+ 
+            
             //1.字典转模型
-            guard let array = NSArray.yy_modelArray(with: WBStatus.self, json: list ?? []) as? [WBStatus] else {
+            var array = [YWStatusViewModel]()
+            
+            //遍历服务器返回字典数组，字典转模型
+            
+            for dic in list ?? [] {
                 
-                completion(isSuccess)
-                
-                return
+                //创建微博模型 - 创建失败 继续遍历
+                guard let model = WBStatus.yy_model(with: dic) else{
+                    continue
+                }
+                //将视图模型添加到数组
+                array.append(YWStatusViewModel(model: model))
             }
-            //2.拼接数据
+            
             self.statusList += array
-            //3.完成回调
+            
             completion(isSuccess)
+
             
             
             
+            
+            
+            
+            
+            //list是有值的，但是 字典转模型失败
+            //1.字典转模型
+//            guard let array = NSArray.yy_modelArray(with: WBStatus.self, json: list ?? []) as? [WBStatus] else {
+//
+//                completion(isSuccess)
+//
+//                return
+//            }
+//            //2.拼接数据
+//            self.statusList += array
+//            //3.完成回调
+//            completion(isSuccess)
+            
+     
         }
-        
-        
-        
+   
     }
     
     

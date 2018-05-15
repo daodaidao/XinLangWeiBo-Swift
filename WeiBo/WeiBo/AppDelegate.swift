@@ -11,9 +11,9 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -23,14 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor  = UIColor.white
         window?.rootViewController = WBMainViewController()
         window?.makeKeyAndVisible()
- 
+        
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         
         loadAppInfo()
         
         return true
     }
-
+    
 }
 
 
@@ -39,7 +39,7 @@ extension AppDelegate {
     
     private func loadAppInfo(){
         
-    //1.模拟异步
+        //1.模拟异步
         DispatchQueue.global().async {
             
             //1> url
@@ -63,7 +63,7 @@ extension AppDelegate {
             
             
         }
-
+        
     }
     
 }
@@ -74,9 +74,9 @@ extension AppDelegate {
     
     fileprivate func steupAdditions() {
         //1.设置 SVP 的最下接触时间
-//        SVProgressHUD.setMinimumDismissTimeInterval(1)
-//        //2.设置网络加载指示器
-//        AFNetworkActivityIndicatorManager.shared().isEnabled = true
+        //        SVProgressHUD.setMinimumDismissTimeInterval(1)
+        //        //2.设置网络加载指示器
+        //        AFNetworkActivityIndicatorManager.shared().isEnabled = true
         //3.设置用户授权显示通知
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound,.carPlay ]) { (success, error) in

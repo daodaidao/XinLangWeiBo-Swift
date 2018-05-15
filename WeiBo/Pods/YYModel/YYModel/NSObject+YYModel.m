@@ -1466,8 +1466,10 @@ static NSString *ModelDescription(NSObject *model) {
     }
     
     NSObject *one = [cls new];
+    //jay修改过
     if ([one yy_modelSetWithDictionary:dictionary]) return one;
     return nil;
+//    return one;
 }
 
 - (BOOL)yy_modelSetWithJSON:(id)json {
@@ -1479,10 +1481,11 @@ static NSString *ModelDescription(NSObject *model) {
     if (!dic || dic == (id)kCFNull) return NO;
     if (![dic isKindOfClass:[NSDictionary class]]) return NO;
     
-
     _YYModelMeta *modelMeta = [_YYModelMeta metaWithClass:object_getClass(self)];
+      // 没有key->property直接返回？
     if (modelMeta->_keyMappedCount == 0) return NO;
     
+    NSLog(@"过来了");
     if (modelMeta->_hasCustomWillTransformFromDictionary) {
         dic = [((id<YYModel>)self) modelCustomWillTransformFromDictionary:dic];
         if (![dic isKindOfClass:[NSDictionary class]]) return NO;
@@ -1800,6 +1803,7 @@ static NSString *ModelDescription(NSObject *model) {
         NSObject *obj = [cls yy_modelWithDictionary:dic];
         if (obj) [result addObject:obj];
     }
+    
     return result;
 }
 
